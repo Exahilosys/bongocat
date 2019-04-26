@@ -11,6 +11,7 @@ Options:
     --neutral=<name>    Represents the no-state image [default: -]
 """
 
+
 import sys, os
 import itertools
 import tkinter
@@ -23,7 +24,7 @@ def construct():
 
     root = tkinter.Tk()
 
-    root.title(__version__)
+    root.title('cat')
 
     label = tkinter.Label(root)
 
