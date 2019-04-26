@@ -15,7 +15,7 @@ Options:
 import sys, os
 import itertools
 import tkinter
-
+import pkg_resources
 
 __all__ = ()
 
@@ -24,7 +24,11 @@ def construct():
 
     root = tkinter.Tk()
 
-    root.title('cat')
+    resources = pkg_resources.require(__name__)
+
+    resource = resources[0]
+
+    root.title(resource.version)
 
     label = tkinter.Label(root)
 
